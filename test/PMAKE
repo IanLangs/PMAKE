@@ -1,0 +1,6 @@
+-a
+python3.14 a.py
+-b
+python3.14 b.py
+-c
+python3.14 c.py

@@ -14,7 +14,7 @@ CompileType getCompileType(const str& typeStr) {
 }
 
 int main(int argc, char** argv) {
-    if (argc != 3) throw std::runtime_error("Usage: PMAKE -<type> <infile>");
+    if (argc != 3) throw std::runtime_error("Usage: PMAKE -<type> <cmake file>");
     str fileContent = readFile(argv[2]);
     ListStr compileTypes = extractCompileType(fileContent);
     CompileType Type = getCompileType(argv[1]);
