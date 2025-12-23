@@ -1,5 +1,5 @@
 #include "compileTypes.hpp"
-
+#include <iostream>
 enum class CompileType {
     A,
     B,
@@ -14,6 +14,14 @@ CompileType getCompileType(const str& typeStr) {
 }
 
 int main(int argc, char** argv) {
+    if(argv[1] == "--help" || argv[1] == "-h") {
+        std::cout << "Usage: PMAKE -<type> <cmake file>\n";
+        std::cout << "Types:\n";
+        std::cout << "  -a : Compile type A\n";
+        std::cout << "  -b : Compile type B\n";
+        std::cout << "  -c : Compile type C\n";
+        return 0;
+    }
     if (argc != 3) throw std::runtime_error("Usage: PMAKE -<type> <cmake file>");
     str fileContent = readFile(argv[2]);
     ListStr compileTypes = extractCompileType(fileContent);
