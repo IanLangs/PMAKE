@@ -16,3 +16,7 @@ comando de compilacion b o null
 
 -c
 comando de compilacion c o null
+
+compilar
+
+PMAKE &lt;tipo&gt; &lt;archivo de config de pmake&gt;
