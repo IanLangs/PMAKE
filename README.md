@@ -8,11 +8,11 @@ puedes poner comandos para compilar con 3 formas de compilar
 
 y se hace asi
 
-## -a
+-a
 comando de compilacion a o null
 
-## -b
+-b
 comando de compilacion b o null
 
-## -c
+-c
 comando de compilacion c o null
