@@ -9,12 +9,15 @@ puedes poner comandos para compilar con 3 formas de compilar
 y se hace asi
 
 -a
+
 comando de compilacion a o null
 
 -b
+
 comando de compilacion b o null
 
 -c
+
 comando de compilacion c o null
 
 compilar
