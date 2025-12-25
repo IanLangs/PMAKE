@@ -28,8 +28,8 @@ etc.
 
 ## Compile
 
-PMAKE <type> <pmake config file>
+PMAKE &lt;type&gt; &lt;pmake config file&gt;
 
 ## Show command
 
-PMAKE <type> <pmake config file> -s
+PMAKE &lt;type&gt; &lt;pmake config file&gt; -s
