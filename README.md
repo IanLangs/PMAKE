@@ -1,29 +1,5 @@
-# PMAKE
+# Languages
 
-formato para establecer un compilador o interprete para tus proyectos
+[español](./ESPAÑOL.md)
 
-puedes poner comandos para compilar con varios formas de compilar
-
--a -b -c
-
-y asi hasta -z
-
-se hace asi
-
--a
-
-comando de compilacion a o null
-
--b
-
-comando de compilacion b o null
-
--c
-
-comando de compilacion c o null
-
-etc
-
-compilar
-
-PMAKE &lt;tipo&gt; &lt;archivo de config de pmake&gt;
+[english](./ENGLISH.md)

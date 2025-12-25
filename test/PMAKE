@@ -1,6 +1,7 @@
+$py = python3.14
 -a
-python3.14 a.py
+$py a.py
 -b
-python3.14 b.py
+$py b.py
 -c
-python3.14 c.py
+$py c.py

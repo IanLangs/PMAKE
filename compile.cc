@@ -1,4 +1,5 @@
 #include "compileTypes.hpp"
+#include "replacer.hpp"
 #include <iostream>
 enum class CompileType {
     A,
@@ -60,25 +61,36 @@ CompileType getCompileType(const str& typeStr) {
 }
 
 int main(int argc, char** argv) {
-    str arg1 = argv[1];
+    str arg1 = argc >= 2 ? argv[1] : "";
     if(arg1 == "--help" || arg1 == "-h") {
-        std::cout << "Usage: PMAKE -<type> <cmake file>\n";
-        std::cout << "Types:\n";
-        std::cout << "  -a : Compile type A\n";
-        std::cout << "  -b : Compile type B\n";
-        std::cout << "  -c : Compile type C\n";
-        std::cout << "y asi sucesivamente hasta -z\n";
+        str help =
+            "Compile usage: PMAKE -<type> <cmake file>\n"
+            "Show usage: PMAKE -<type> <cmake file> -s\n"
+            "Types:\n"
+            "  -a : Compile type A\n"
+            "  -b : Compile type B\n"
+            "  -c : Compile type C\n"
+            "and so on, up to -z\n";
+        std::cout << help;
         return 0;
     }
-    if (argc != 3) {
-        std::cerr << "\u001b[31mUsage: PMAKE -<type> <cmake file>\u001b[0m" << std::endl;
+    if (argc > 4) {
+        std::cerr << "\u001b[31mUsage:\nCompile: PMAKE -<type> <cmake file>\nShow: PMAKE -<type> <cmake file> -s\u001b[0m" << "\n";
         return 1;
     }
     str fileContent = readFile(argv[2]);
+    fileContent = replace_vars(fileContent);
     ListStr compileTypes = extractCompileType(fileContent);
     CompileType Type = getCompileType(arg1);
     
     short index = static_cast<short>(Type);
+
+    if (argc == 4 && str(argv[3]) == "-s") {
+        std::cout << "Compile command for " << arg1 << ":\n";
+        std::cout << compileTypes[index] << "\n";
+        return 0;
+    }
+
     system(compileTypes[index].c_str());
     return 0;
 }
