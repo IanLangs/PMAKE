@@ -2,11 +2,13 @@
 
 formato para establecer un compilador o interprete para tus proyectos
 
-puedes poner comandos para compilar con 3 formas de compilar
+puedes poner comandos para compilar con varios formas de compilar
 
 -a -b -c
 
-y se hace asi
+y asi hasta -z
+
+se hace asi
 
 -a
 
@@ -19,6 +21,8 @@ comando de compilacion b o null
 -c
 
 comando de compilacion c o null
+
+etc
 
 compilar
 
