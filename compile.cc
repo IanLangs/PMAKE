@@ -80,6 +80,8 @@ int main(int argc, char** argv) {
     }
     str fileContent = readFile(argv[2]);
     fileContent = replace_vars(fileContent);
+    fileContent = std::regex_replace(fileContent, std::regex("#.*"), "");
+    fileContent = std::regex_replace(fileContent, std::regex("^\\s*$", std::regex_constants::multiline), "");
     ListStr compileTypes = extractCompileType(fileContent);
     CompileType Type = getCompileType(arg1);
     

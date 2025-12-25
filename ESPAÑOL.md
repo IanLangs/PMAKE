@@ -33,3 +33,7 @@ PMAKE &lt;tipo&gt; &lt;archivo de config de pmake&gt;
 ## ver comando
 
 PMAKE &lt;tipo&gt; &lt;archivo de config de pmake&gt; -s
+
+## Comentarios
+
+\#Comentario

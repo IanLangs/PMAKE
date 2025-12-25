@@ -1,7 +1,7 @@
 $py = python3.14
 -a
-$py a.py
+$py a.py #archivo a
 -b
-$py b.py
+$py b.py #archivo b
 -c
-$py c.py
+$py c.py #archivo c
