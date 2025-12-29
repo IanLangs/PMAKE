@@ -82,6 +82,11 @@ int main(int argc, char** argv) {
     fileContent = replace_vars(fileContent);
     fileContent = std::regex_replace(fileContent, std::regex("#.*"), "");
     fileContent = std::regex_replace(fileContent, std::regex("^\\s*$", std::regex_constants::multiline), "");
+
+    if (arg1 == "--list") {
+        std::cout << "file:\n" << fileContent << "\n";
+        return 0;
+    }
     ListStr compileTypes = extractCompileType(fileContent);
     CompileType Type = getCompileType(arg1);
     
