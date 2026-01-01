@@ -26,6 +26,13 @@ Compilation command C or null
 
 etc.
 
+It can be
+-l cmd
+
+or
+
+-l cmd
+
 ## Compile
 
 PMAKE &lt;type&gt; &lt;pmake config file&gt;
