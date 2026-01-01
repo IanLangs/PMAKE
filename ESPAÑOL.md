@@ -26,6 +26,13 @@ comando de compilacion c o null
 
 etc
 
+puede ser
+-l cmd
+
+o
+
+-l
+cmd
 ## compilar
 
 PMAKE &lt;tipo&gt; &lt;archivo de config de pmake&gt;
